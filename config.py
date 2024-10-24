@@ -1,7 +1,7 @@
-api_token = '7280137018:AAFVIe-WB381xu36Z6XAi7GiXkc57fV2aQ8'
+api_token = '1389355782:AAFvkiz-1W6T6zIXJF-xSUYklV3kclo0PXU'
 
 admin = 800703982
 
-admin2 = 6768397766
+admin2 = 5102442090
 
 admin3 = 685953723

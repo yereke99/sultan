@@ -5,7 +5,7 @@ from datetime import datetime
 
 class Database():
     def __init__(self) -> None:
-        self.db = connect('cinema.db')
+        self.db = connect('bonus.db')
         self.cursor = self.db.cursor()
 
 

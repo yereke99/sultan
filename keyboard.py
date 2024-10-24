@@ -34,22 +34,55 @@ class Button:
     
     def menu(self):
         keyboard = [
-            "Добавить заведение",
-            "Посмотреть мои заведения",
-            "Проверить баллы и скидочную карту",
-            "Профиль",
+            "🖊 Добавить заведение",
+            "🔍 Посмотреть мои заведения",
+            "🧮 Проверить баллы и скидочную карту",
+            "👤 Профиль",
         ]
 
         return self._create_keyboard(keyboard)
     
+    def sale(self):
+        k = [
+            "📉 Посмотреть заведения со скидкой",
+        ]
+
+        return self._create_keyboard(k)
+    
+    @staticmethod
+    def accept(establishment_id):
+        keyboard = types.InlineKeyboardMarkup()
+        
+        keyboard.add(types.InlineKeyboardButton(
+            "✔️ Одобрить заведение",
+            callback_data=f"accept_establishment:{establishment_id}"
+        ))
+        keyboard.add(types.InlineKeyboardButton(
+            "🔴 Отклонить заведение",
+            callback_data=f"reject_establishment:{establishment_id}"
+        ))
+        
+        return keyboard
+
+        
+    
+    def cancel(self):
+
+        k = [
+            "🔕 Отмены операции"
+        ]
+
+        return self._create_keyboard(k)
+    
     def admin(self):
         keyboard = [
-            "Одобрить заведения",
-            "Отклонить заведения",
-            "Просмотреть список ожидающих заведений",
+            "✔️ Одобрить заведения",
+            "🔴 Отклонить заведения",
+            "🗂 Просмотреть список ожидающих заведений",
         ]
 
         return self._create_keyboard(keyboard)
+    
 
     def send_contact(self):
 
